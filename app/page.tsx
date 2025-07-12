@@ -16,7 +16,7 @@ export default async function Home() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* 🔲 Overlay for dark blur effect */}
+      {/* 🔲 Overlay */}
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
 
       <div className="relative z-10 max-w-3xl mx-auto space-y-10 px-4 sm:px-6">
@@ -49,26 +49,14 @@ export default async function Home() {
           </Link>
         </section>
 
-        {/* ✅ Total Count */}
+        {/* ✅ Only Total Count */}
         <section className="bg-gray-800 rounded-xl shadow-lg p-5 sm:p-8">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 text-white">
             📋 Total Registrations: {applicants.length}
           </h2>
 
-          {applicants.length === 0 ? (
+          {applicants.length === 0 && (
             <p className="text-gray-400 text-sm">No applications yet. Be the first one to apply!</p>
-          ) : (
-            <ul className="space-y-3">
-              {applicants.map((applicant: any) => (
-                <li
-                  key={applicant._id}
-                  className="p-4 bg-gray-700 rounded-md hover:bg-gray-600 transition flex flex-col sm:flex-row justify-between sm:items-center gap-2"
-                >
-                  <span className="font-medium text-white text-sm sm:text-base">{applicant.name}</span>
-                  <span className="text-green-400 text-sm">✔ Registered</span>
-                </li>
-              ))}
-            </ul>
           )}
         </section>
       </div>
