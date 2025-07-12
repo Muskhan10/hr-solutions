@@ -16,34 +16,32 @@ export default function Home() {
       {/* 🔲 Overlay */}
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
 
-      <div className="relative z-10 max-w-3xl mx-auto space-y-10 px-4 sm:px-6">
+      <div className="relative z-10 max-w-2xl mx-auto space-y-10 px-4 sm:px-6">
         {/* 🚀 Header */}
-        <section className="text-center">
-          <h1 className="text-2xl sm:text-4xl font-extrabold text-white drop-shadow mb-3 leading-snug">
+        <section className="text-center space-y-3">
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-white drop-shadow-sm">
             🚀 Frontend Developer Wanted
           </h1>
-          <p className="text-sm sm:text-lg text-gray-300 max-w-md mx-auto">
+          <p className="text-sm sm:text-lg text-gray-300">
             Join our team to build stunning interfaces & user experiences that users love.
           </p>
         </section>
 
         {/* 📄 Job Summary */}
-        <section className="bg-gray-800 rounded-2xl shadow-lg p-5 sm:p-8 space-y-4 text-sm sm:text-base">
+        <section className="bg-gray-900/90 rounded-2xl shadow-2xl border border-white/10 p-6 sm:p-8 space-y-5">
           <h2 className="text-lg sm:text-2xl font-bold text-white">📄 Job Summary</h2>
-          <p className="text-gray-300">
-            We are looking for a skilled front-end developer to join our team and build dynamic, user-friendly apps.
-          </p>
-          <p className="text-gray-300">
-            You will turn design wireframes into high-quality code and work with designers & backend developers to enhance UX.
-          </p>
-          <p className="text-gray-300">
-            If you love clean UIs and have an eye for detail — we want you!
-          </p>
-          <Link href="/apply">
-            <button className="mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2.5 rounded-xl shadow transition-all w-full sm:w-auto text-sm sm:text-base">
-              ✍️ Apply Now
-            </button>
-          </Link>
+          <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm sm:text-base">
+            <li>Build dynamic, user-friendly frontends with modern frameworks.</li>
+            <li>Collaborate with UI/UX designers and backend engineers.</li>
+            <li>Deliver high-quality, responsive, and accessible UIs.</li>
+          </ul>
+          <div className="text-center sm:text-left">
+            <Link href="/apply">
+              <button className="mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2.5 rounded-full shadow-lg transition-all w-full sm:w-auto text-sm sm:text-base">
+                ✍️ Apply Now
+              </button>
+            </Link>
+          </div>
         </section>
       </div>
     </main>
