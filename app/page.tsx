@@ -1,10 +1,7 @@
 // app/page.tsx
 import Link from "next/link";
-import { getApplicants } from "@/lib/actions";
 
-export default async function Home() {
-  const applicants = await getApplicants();
-
+export default function Home() {
   return (
     <main
       className="min-h-screen text-white px-4 py-12 relative overflow-hidden"
@@ -47,17 +44,6 @@ export default async function Home() {
               ✍️ Apply Now
             </button>
           </Link>
-        </section>
-
-        {/* ✅ Only Total Count */}
-        <section className="bg-gray-800 rounded-xl shadow-lg p-5 sm:p-8">
-          <h2 className="text-xl sm:text-2xl font-bold mb-4 text-white">
-            📋 Total Registrations: {applicants.length}
-          </h2>
-
-          {applicants.length === 0 && (
-            <p className="text-gray-400 text-sm">No applications yet. Be the first one to apply!</p>
-          )}
         </section>
       </div>
     </main>
